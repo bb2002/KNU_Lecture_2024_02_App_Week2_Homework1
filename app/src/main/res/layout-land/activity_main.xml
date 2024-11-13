@@ -7,15 +7,33 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/current_image_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/pocket1"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/before_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pocket1" />
+
+        <ImageView
+            android:id="@+id/current_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pocket1" />
+
+        <ImageView
+            android:id="@+id/next_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pocket1" />
+    </LinearLayout>
+
+
 
     <EditText
         android:id="@+id/index_input"
@@ -24,31 +42,12 @@
         android:text="1"
         android:inputType="numberDecimal"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/image_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/image_container"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/button_container">
 
-        <ImageView
-            android:id="@+id/before_image_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/pocket1"/>
 
-        <ImageView
-            android:id="@+id/next_image_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/pocket1"/>
-    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/button_container"
